@@ -1,0 +1,112 @@
+#!/bin/cat
+# -*- coding: utf-8 -*-
+
+github に repository 移す前の履歴 (上が最新)
+
+最高記録更新 33秒 !!!
+case00.png
+
+OS (機種依存か) の色設定の違いで誤動作することが判明
+TrueColor 32bit だと正常 / HighColor 16bit だと誤動作
+誤動作する機種上で CHKBMP を再生成すると若干改善したが まだ誤動作
+白黒 2 値化したらどうなるか？ (未作業)
+
+辞書 reload 対応
+自動 mirror 生成
+二重 click 防止
+roll バグ修正
+
+辞書対応作業中
+AutoMineDict.py
+ reload の lop lmk
+ add の mirror まだ
+wxAutoMine.py
+ == f c と != 9 の処理まだ
+ roll 検出しなくなる
+
+辞書 reload 対応途中
+AutoMineDict.txt を分離
+バグ ( lop と lmk を空にしているので roll で無限ループ )
+
+辞書適用
+辞書検出表示する/しない
+ self.ptn
+ self.showdict
+設定値デフォルト変更
+
+デフォルト変更動作モード(適当に開く)
+BalloonTip は target 側が TOPMOST だと一回しか開かれない
+TOPMOST が解除されるとまた開かれる
+
+BalloonTip の instance を self.btd で保存
+
+動作速度説明追加
+推論状態表示と内部状態表示のデフォルト値変更
+
+AutoMineDict.py
+BalloonTipDict.py
+ default iconbmp
+
+辞書 pattern match 準備
+list -> set に変更
+ set(((x, y),)) # set() コンストラクタの引数 複数 tuple のときに注意
+ s.add((x, y)) # これは問題ない
+ set().union(set())
+ amd.match
+
+BalloonTipDict.py 追加
+
+BalloonTip.py 追加
+
+適当に開くモードのバグ修正
+煮詰まったときその都度 1 回だけ適当に開くべきところ
+連続して適当に開いてしまっていたため失敗が多発していたのを修正
+ self.count = 0 にリセットするのではなく
+ self.gcount を導入して差分を見るように修正
+失敗したときの自動リトライの有無も選択出来るようにした
+
+rc (icon)
+misscont
+
+timer clock 可変
+辞書追加
+
+パラメータ可変に
+最初に開く場所
+次の行動に遷移
+メッセージとログを分離
+
+辞書修正
+
+高速化についての考察
+updatepaint(wx.ClientDC(self.cap)) 追加
+左panel背景orange
+
+辞書追加(準備のみ)
+INTERVAL=10
+suggestion 追加 (辞書or推論なしだと成功難しい)
+loginfer 追加 (旧 self.txt.AppendText() を条件付きに)
+showinfer 追加 (高速化) pause / running 表示追加
+ (topmost(False) を pause の中へ移動 & resume で再度 topmost(True) にする)
+showmap 追加
+ capture / OnPaint 内 self.mdc.flush を showmap 条件付き
+
+change result of infer / guess
+
+dict rclick
+
+add AutoMineDict.py
+
+open and mark fixed
+
+open and mark
+
+mark
+
+grayscale
+
+wxAutoMine.png
+
+wxAutoMine.py
+
+first
