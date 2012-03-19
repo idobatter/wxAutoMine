@@ -1,0 +1,8 @@
+wxAutoMine
+
+This is a minesweeper solver ( python winmine.exe auto cruiser ) .
+
+CAUTION:
+ Bundled 'winmine.exe' has a JAPANESE windowclassname.
+ So you should better to use your own 'winmine.exe'
+ and modify TARGETWCLASS value in 'wxAutoMine.py'.
