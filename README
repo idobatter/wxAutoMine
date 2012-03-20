@@ -9,3 +9,10 @@ CAUTION:
  Bundled 'winmine.exe' has a JAPANESE windowclassname.
  So you should better to use your own 'winmine.exe'
  and modify TARGETWCLASS value in 'wxAutoMine.py'.
+
+SCREENSHOT:
+ case00.png
+
+JAPANESE:
+ Python で マインスイーパ を 自動操縦
+ 標準モジュールのみ ( ctypes ) と wxPython で動作します。
