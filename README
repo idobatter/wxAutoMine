@@ -10,8 +10,11 @@ CAUTION:
  So you should better to use your own 'winmine.exe'
  and modify TARGETWCLASS value in 'wxAutoMine.py'.
 
-SCREENSHOT:
- case00.png
+Web(ScreenShots):
+ http://idobatter.github.com/wxAutoMine/
+
+Wiki:
+ https://github.com/idobatter/wxAutoMine/wiki
 
 JAPANESE:
  Python で マインスイーパ を 自動操縦
