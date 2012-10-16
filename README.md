@@ -4,12 +4,15 @@ wxAutoMine
 This is a minesweeper solver ( python winmine.exe auto cruiser ) .
 
 You can play it only with Python and wxPython. ( Not use SendKeys, PIL, etc. )
+
 ( This program is tested on Windows 7 / Python 2.5 / wxPython 2.8.6 . )
 
 CAUTION:
 --------
 Bundled 'winmine.exe' has a JAPANESE windowclassname.
+
 So you should better to use your own 'winmine.exe'
+
 and modify TARGETWCLASS value in 'wxAutoMine.py'.
 
 Links
@@ -45,4 +48,5 @@ JAPANESE
 --------
 
 Python で マインスイーパ を 自動操縦
+
 標準モジュールのみ ( ctypes ) と wxPython で動作します。
